@@ -6,8 +6,9 @@ from keras.models import load_model
 import sys
 from streamlit_option_menu import option_menu
 
+
 #Loading the VGG16 model
-model= load_model('model.h5',compile=(False))
+model= load_model('mymodel.h5',compile=(False))
 st.markdown('<style>body{background-color:Blue;}</style>',unsafe_allow_html=True)
 
 
