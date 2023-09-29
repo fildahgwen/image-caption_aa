@@ -179,7 +179,7 @@ if uploaded_image is not None:
         )'''
 
         # Generate caption using the model
-           def predict_caption(model, image_features, tokenizer, max_caption_length):
+def predict_caption(model, image_features, tokenizer, max_caption_length):
             caption = "startseq"
             for _ in range(max_caption_length):
                 sequence = tokenizer.texts_to_sequences([caption])[0]
