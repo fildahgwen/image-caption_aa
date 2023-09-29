@@ -25,6 +25,10 @@ def predict(frame, model):
     # Predict with the VGG16 model
     prediction = model.predict(img)
 
+  
+
+    
+
     # Convert the prediction into text
     pred_text = tf.keras.applications.inception_v3.decode_predictions(prediction, top=1)
     for (i, (imagenetID, label, prob)) in enumerate(pred_text[0]):
@@ -76,7 +80,7 @@ def object_detection(search_key,frame, model):
 def main():
     
     st.title("Image Captioning App")
-    st.text("InceptionV3")
+   
 
     
     choice = option_menu("Main Menu",["Home","Upload","About"],icons = ["house","cloud_upload","list-task"],menu_icon ="cast",default_index = 0,orientation = "horizontal")
@@ -84,7 +88,7 @@ def main():
     if choice == "Upload":
         st.subheader("Upload Your Video")
 
-        video_file_path = st.file_uploader("accepting mp4,avi", type=["mp4", "avi"])
+        video_file_path = st.file_uploader("accepting mp4,avi", type=["mp4", "avi"],maxUploadSize = 2)
 
         if video_file_path is not None:
             path = video_file_path.name
