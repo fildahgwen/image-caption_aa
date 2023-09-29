@@ -75,7 +75,7 @@ def object_detection(search_key,frame, model):
 # Main App
 def main():
     
-    st.title("*** Computer vision***")
+    st.title("Image Captioning App")
     st.text("InceptionV3")
 
     
