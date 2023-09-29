@@ -133,22 +133,23 @@ def main():
                             break
         
                         # Perform object detection
-                        object_detection(key,frame, model)
+                        predict_caption(model, image_features, tokenizer, max_caption_length)
                         
                     cap.release()
                     output.release()
                     #cv2.destroyAllWindows()
 
     elif choice == "Home":
-        st.subheader("Detect Objects In Video")
+        st.subheader("Captions In Video")
         st.image("./ai.png")
     
     elif choice == "About":
-        st.text('Object detection')
+        st.text('Image Captioning')
+        
         
        
 
-if __name__ == '__main__':
+'''if __name__ == '__main__':
     main()
 
 # Process uploaded image
@@ -175,7 +176,7 @@ if uploaded_image is not None:
         def get_word_from_index(index, tokenizer):
             return next(
                 (word for word, idx in tokenizer.word_index.items() if idx == index), None
-        )
+        )'''
 
         # Generate caption using the model
         def predict_caption(model, image_features, tokenizer, max_caption_length):
@@ -204,3 +205,5 @@ if uploaded_image is not None:
         f'</div>',
         unsafe_allow_html=True
     )
+if __name__ == '__main__':
+    main()
