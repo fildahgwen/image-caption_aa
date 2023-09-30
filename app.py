@@ -31,7 +31,7 @@ st.set_page_config(page_title="Caption Generator App", page_icon="📷")
 # Streamlit app
 st.title("Image Caption Generator")
 st.markdown(
-    "Upload an image, and this app will generate a caption for it using a trained LSTM model."
+    "Upload an image, and this app will generate a caption for it "
 )
 
 # Upload image
